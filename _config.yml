@@ -134,7 +134,7 @@ bing_site_verification: # out your bing-site-verification ID (Bing Webmaster)
 # -----------------------------------------------------------------------------
 
 blog_name: Direitos e desenvolvimento # blog_name will be displayed in your blog page
-blog_description: Pensando e discutindo pesquisa e como o direito pode melhorar a vida das pessoas
+blog_description: #Pensando e discutindo pesquisa e como o direito pode melhorar a vida das pessoas
 permalink: /blog/:year/:title/
 lsi: false # produce an index for related posts
 
@@ -305,8 +305,8 @@ jekyll-archives:
     tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
-display_tags: ["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["external-services"] # these categories will be displayed on the front page of your blog
+display_tags: #["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
+display_categories: #["external-services"] # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -342,7 +342,7 @@ scholar:
 enable_publication_badges:
   altmetric: false # Altmetric badge (Customization options: https://badge-docs.altmetric.com/index.html)
   dimensions: false # Dimensions badge (Customization options: https://badge.dimensions.ai/)
-  google_scholar: true # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
+  google_scholar: false # Google Scholar badge (https://scholar.google.com/intl/en/scholar/citations.html)
   inspirehep: false # Inspire HEP badge (https://help.inspirehep.net/knowledge-base/citation-metrics/)
 
 # Filter out certain bibtex entry keywords used internally from the bib output
