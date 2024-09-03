@@ -3,7 +3,7 @@ layout: page
 permalink: /supremo-explicado/
 title: Supremo Explicado
 description: Materiais adicionais
-nav: true
+nav: false
 nav_order: 10
 ---
 
