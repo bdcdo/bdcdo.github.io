@@ -8,9 +8,9 @@ profile:
   align: right
   image: prof_pic.jpg
   image_circular: false # crops the image to make it circular
-  more_info: >
-    <p>Mestrando em Direito e Desenvolvimento</p>
-    <p>Pesquisador do Núcleo de Saúde do Centro de Gestão e Políticas Públicas do Insper</p>
+  #more_info: >
+  #  <p>Mestrando em Direito e Desenvolvimento</p>
+  #  <p>Pesquisador do Núcleo de Saúde do Centro de Gestão e Políticas Públicas do Insper</p>
 
 news: false # includes a list of news items
 selected_papers: true # includes a list of papers marked as "selected={true}"
