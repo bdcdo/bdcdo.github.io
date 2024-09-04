@@ -145,7 +145,7 @@
       {% endif %}
     </div>
 
-    <!-- Journal/Book title and date -->
+<!-- Journal/Book title and date -->
     {% assign proceedings = 'inproceedings,incollection' | split: ',' %}
     {% assign thesis = 'thesis,mastersthesis,phdthesis' | split: ',' %}
     {% if entry.type == 'article' %}
@@ -175,12 +175,16 @@
     <div class="periodical">
       {{ periodical | strip }}
     </div>
+    {% if entry.additional_info %}
+    <div class="periodical">
+      {{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}
+    </div>
+    {% endif %}
     <div class="periodical">
       {{ entry.note | strip }}
     </div>
-    {% if entry.additional_info %}
-    {% capture entrytype %}{{ entrytype }}{{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}{% endcapture %}
-    {% endif %}
+
+
 
     <!-- Links/Buttons -->
     <div class="links">
