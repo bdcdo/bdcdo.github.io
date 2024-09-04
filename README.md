@@ -5,6 +5,11 @@
 5. Organizar projetos por projetos que geraram mais de uma publicação
 6. Organizar CV
 7. Organizar notícias - indicar limite de quantas mostrar (https://www.maths.dur.ac.uk/users/s.m.fearn/)
+8. Versão em pt e em inglês
 
 About
 Focar mais em interesses? --> Nem contei meu tema de pesquisa. Acho que pode ser melhor falar em agenda de pesquisa
+
+https://www.mit.edu/~abobu/
+https://dineshnatesan.com/outreach/
+
