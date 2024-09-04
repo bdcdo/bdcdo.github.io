@@ -1,6 +1,6 @@
 ---
 layout: about
-title: Sobre
+title: Sobre mim
 permalink: /
 subtitle:
 
