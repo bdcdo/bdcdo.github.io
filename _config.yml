@@ -49,8 +49,6 @@ rss_icon: false
 
 navbar_fixed: true
 footer_fixed: true
-search_enabled: true
-socials_in_search: true
 bib_search: true
 
 # Dimensions
@@ -286,7 +284,7 @@ sass:
 # -----------------------------------------------------------------------------
 
 jekyll-minifier:
-  exclude: ["robots.txt", "assets/js/search/*.js"]
+  exclude: ["robots.txt"]
   uglifier_args:
     harmony: true
 
