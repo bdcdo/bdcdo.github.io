@@ -1,17 +1,13 @@
 ---
 layout: page
 permalink: /publications/
-title: Pesquisa
-description: Publicações separadas por tipo em ordem cronológica reversa. Gerado via jekyll-scholar.
+title: Publicações
+description: Separadas por tipo, da mais recente até a mais antiga. Artigos de opinião estão disponíveis no Blog.
 nav: true
 nav_order: 1
 ---
 
 <!-- _pages/publications.md -->
-
-<!-- Bibsearch Feature -->
-
-{% include bib_search.liquid %}
 
 <div class="publications">
 
