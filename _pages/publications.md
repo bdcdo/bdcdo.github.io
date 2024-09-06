@@ -2,7 +2,7 @@
 layout: page
 permalink: /publications/
 title: Pesquisa
-description: Publicações separadas por tipo, da mais recente até a mais antiga.
+description: 
 nav: true
 nav_order: 1
 ---
