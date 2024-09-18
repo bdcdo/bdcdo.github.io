@@ -1,4 +1,4 @@
-1. Organizar publicações
+1. Organizar publicações --> Incluir artigos aceitos, mas ainda não publicados (criar news sobre isso)
 2. Organizar ensino
 3. Publicar Blog sobre como fazer site acadêmico
 4. Ver todos os CVs modelo e ver o que mais quero fazer
@@ -12,4 +12,3 @@ Focar mais em interesses? --> Nem contei meu tema de pesquisa. Acho que pode ser
 
 https://www.mit.edu/~abobu/
 https://dineshnatesan.com/outreach/
-
