@@ -74,6 +74,9 @@
   document.addEventListener('DOMContentLoaded', function() {
     var lang = (navigator.language || navigator.userLanguage).slice(0,2);
     var chosen = (lang === 'pt' ? 'pt' : 'en');
+    // expõe globalmente para inspeção no console
+    window.chosenLang = chosen;
+    console.log('[i18n] chosen language →', chosen);
     document.documentElement.lang = chosen;
     document.querySelectorAll('.lang').forEach(function(el) {
       if (el.dataset.lang === chosen) {
