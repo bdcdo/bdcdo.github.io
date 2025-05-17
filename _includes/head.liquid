@@ -71,16 +71,16 @@
   .lang.visible { display: block; }
 </style>
 <script>
-  (function() {
+  document.addEventListener('DOMContentLoaded', function() {
     var lang = (navigator.language || navigator.userLanguage).slice(0,2);
-    var chosen = lang === 'pt' ? 'pt' : 'en';
+    var chosen = (lang === 'pt' ? 'pt' : 'en');
     document.documentElement.lang = chosen;
     document.querySelectorAll('.lang').forEach(function(el) {
       if (el.dataset.lang === chosen) {
         el.classList.add('visible');
       }
     });
-  })();
+  });
 </script>
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
