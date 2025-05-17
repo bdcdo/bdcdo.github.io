@@ -66,6 +66,22 @@
   <link rel="shortcut icon" href="{{ site.icon | prepend: '/assets/img/' | relative_url | bust_file_cache}}">
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
+<style>
+  .lang { display: none; }
+  .lang.visible { display: block; }
+</style>
+<script>
+  (function() {
+    var lang = (navigator.language || navigator.userLanguage).slice(0,2);
+    var chosen = lang === 'pt' ? 'pt' : 'en';
+    document.documentElement.lang = chosen;
+    document.querySelectorAll('.lang').forEach(function(el) {
+      if (el.dataset.lang === chosen) {
+        el.classList.add('visible');
+      }
+    });
+  })();
+</script>
 <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
 
 <!-- Dark Mode -->
