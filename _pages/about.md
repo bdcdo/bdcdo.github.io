@@ -4,7 +4,7 @@ title: Página inicial
 title_en: Home
 permalink: /
 subtitle:
-nav: true
+nav: false
 nav_order: 1
 
 profile:
