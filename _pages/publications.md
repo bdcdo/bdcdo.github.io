@@ -12,12 +12,12 @@ nav_order: 1
 
 <div class="lang" data-lang="pt">
   <div class="publications">
-    {% bibliography --file assets/bibliography/refs-pt.bib %}
+    {% bibliography --file refs-pt.bib %}
   </div>
 </div>
 
 <div class="lang" data-lang="en">
   <div class="publications">
-    {% bibliography --file assets/bibliography/refs-en.bib %}
+    {% bibliography --file refs-en.bib %}
   </div>
 </div>
