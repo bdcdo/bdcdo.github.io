@@ -1,6 +1,7 @@
 ---
 layout: page
-title: projects
+title: Projetos
+tile_en: Projects
 permalink: /projects/
 description: A growing collection of your cool projects.
 nav: true
