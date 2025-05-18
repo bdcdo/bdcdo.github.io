@@ -10,6 +10,13 @@ nav_order: 2
 
 <!-- _pages/publications.md -->
 
+<div class="post-header">
+  <h1 class="post-title">
+    <span class="lang" data-lang="pt">Publicações</span>
+    <span class="lang" data-lang="en">Publications</span>
+  </h1>
+</div>
+
 <div class="lang" data-lang="pt">
   <div class="publications">
     {% bibliography --file refs-pt.bib %}
