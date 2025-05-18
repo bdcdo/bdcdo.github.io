@@ -50,7 +50,7 @@
           <li class="nav-item {% if page.permalink == '/' %}active{% endif %}">
             <a class="nav-link" href="{{ '/' | relative_url }}">
               <span class="lang" data-lang="pt">{{- about_title }}</span>
-      <span class="lang" data-lang="en">{{- about_title_en }}</span>
+              <span class="lang" data-lang="en">{{- about_title_en }}</span>
               {% if page.permalink == '/' %}
                 <span class="sr-only">(current)</span>
               {% endif %}
@@ -102,7 +102,8 @@
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
                   {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
                   <a class="nav-link" href="{{ url | relative_url }}">
-                    {{- p.title }}
+                    <span class="lang" data-lang="pt">{{- p.title }}</span>
+                    <span class="lang" data-lang="en">{{- p.title_en }}</span>
                     {% if page.url contains p.url %}
                       <span class="sr-only">(current)</span>
                     {% endif %}

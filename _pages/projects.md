@@ -3,7 +3,7 @@ layout: page
 title: Projetos
 title_en: Projects
 permalink: /projects/
-nav: false
+nav: true
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
