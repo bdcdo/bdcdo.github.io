@@ -314,7 +314,7 @@ scholar:
   locale: pt
 
   source: /_bibliography/
-  bibliography: papers.bib
+  bibliography: [refs-pt.bib, refs-en.bib]
   bibliography_template: bib
   bibtex_filters: [latex, smallcaps, superscript]
 
