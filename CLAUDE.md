@@ -46,6 +46,7 @@ The site is built with Jekyll, a static site generator. Key components:
 1. **Configuration**: `_config.yml` contains all site configuration, including social media profiles, layout settings, and plugin configurations.
 
 2. **Content Structure**:
+
    - `_pages/`: Main pages (about, cv, projects, publications, teaching)
    - `_posts/`: Blog posts
    - `_projects/`: Project descriptions
@@ -54,6 +55,7 @@ The site is built with Jekyll, a static site generator. Key components:
    - `_data/`: Structured data files (coauthors.yml, cv.yml, venues.yml)
 
 3. **Theme Structure**:
+
    - `_layouts/`: Page layout templates
    - `_includes/`: Reusable components
    - `_sass/`: SCSS styling files

@@ -67,19 +67,25 @@
 {% endif %}
 <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url | bust_css_cache }}">
 <style>
-  .lang { display: none; }
-  .lang.visible { display: block; }
-  .nav-link .lang.visible { display: inline; }
+  .lang {
+    display: none;
+  }
+  .lang.visible {
+    display: block;
+  }
+  .nav-link .lang.visible {
+    display: inline;
+  }
 </style>
 <script>
-  document.addEventListener('DOMContentLoaded', function() {
-    var lang = (navigator.language || navigator.userLanguage).slice(0,2);
-    var chosen = (lang === 'pt' ? 'pt' : 'en');
+  document.addEventListener('DOMContentLoaded', function () {
+    var lang = (navigator.language || navigator.userLanguage).slice(0, 2);
+    var chosen = lang === 'pt' ? 'pt' : 'en';
     // expõe globalmente para inspeção no console
     window.chosenLang = chosen;
     console.log('[i18n] chosen language →', chosen);
     document.documentElement.lang = chosen;
-    document.querySelectorAll('.lang').forEach(function(el) {
+    document.querySelectorAll('.lang').forEach(function (el) {
       if (el.dataset.lang === chosen) {
         el.classList.add('visible');
       }

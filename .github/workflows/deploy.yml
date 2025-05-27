@@ -84,7 +84,7 @@ jobs:
           sudo apt-get update
           sudo apt-get install -y imagemagick
           pip3 install --upgrade jupyter
-          
+
       - name: Build Site 🏗️
         run: |
           export JEKYLL_ENV=production

@@ -43,7 +43,10 @@
       <div class="collapse navbar-collapse text-right" id="navbarNav">
         <ul class="navbar-nav ml-auto flex-nowrap">
           {% for page in site.pages %}
-            {% if page.permalink == '/' %} {% assign about_title = page.title %} {% assign about_title_en = page.title_en %} {% endif %}
+            {% if page.permalink == '/' %}
+              {% assign about_title = page.title %}
+              {% assign about_title_en = page.title_en %}
+            {% endif %}
           {% endfor %}
 
           <!-- About -->
@@ -56,7 +59,6 @@
               {% endif %}
             </a>
           </li>
-          
 
           <!-- Other pages -->
           {% assign sorted_pages = site.pages | sort: 'nav_order' %}
@@ -80,7 +82,7 @@
                     aria-expanded="false"
                   >
                     <span class="lang" data-lang="pt">{{- p.title }}</span>
-  <span class="lang" data-lang="en">{{- p.title_en }}</span>
+                    <span class="lang" data-lang="en">{{- p.title_en }}</span>
                     {% if page.title == p.title or has_active_child %}
                       <span class="sr-only">(current)</span>
                     {% endif %}

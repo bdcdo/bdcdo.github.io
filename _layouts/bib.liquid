@@ -179,9 +179,9 @@
       {{ entry.note | strip }}
     </div>
     {% if entry.additional_info %}
-    <div class="periodical">
-      {{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}
-    </div>
+      <div class="periodical">
+        {{ entry.additional_info | markdownify | remove: '<p>' | remove: '</p>' }}
+      </div>
     {% endif %}
 
     <!-- Links/Buttons -->

@@ -14,7 +14,7 @@ lang: pt # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🏛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
 
 url: https://bdcdo.github.io # the base hostname & protocol for your site
-baseurl:  # the subpath of your site, e.g. /blog/. Leave blank for root
+baseurl: # the subpath of your site, e.g. /blog/. Leave blank for root
 last_updated: true # set to true if you want to display last updated in the footer
 impressum_path: # set to path to include impressum link in the footer, use the same path as permalink in a page, helps to conform with EU GDPR
 back_to_top: true # set to false to disable the back to top button
@@ -296,7 +296,7 @@ jekyll-archives:
     category: archive-category
   permalinks:
     year: "/blog/:year/"
-    tag: "/blog/tag/:name/" 
+    tag: "/blog/tag/:name/"
     category: "/blog/category/:name/"
 
 display_tags: #["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
@@ -364,7 +364,7 @@ filtered_bibtex_keywords:
   ]
 
 # Maximum number of authors to be shown for each publication (more authors are visible on click)
-max_author_limit:  # leave blank to always show all authors
+max_author_limit: # leave blank to always show all authors
 more_authors_animation_delay: 10 # more authors are revealed on click using animation; smaller delay means faster animation
 
 # Enables publication thumbnails. If disabled, none of the publications will display thumbnails, even if specified in the bib entry.
