@@ -43,4 +43,10 @@ jobs:
         with:
           fail: true
           # only check local links
-          args: --offline --remap '_site(/?.*)/assets/(.*) _site/assets/$2' --verbose --no-progress '_site/**/*.html'
+          args: >-
+            --offline
+            --remap '_site(/?.*)/assets/(.*) _site/assets/$2'
+            --exclude 'file://.*/_site/assets/img/.*-[0-9]+\.webp$'
+            --verbose
+            --no-progress
+            '_site/**/*.html'
