@@ -13,16 +13,16 @@
     -->
     {% if site.imagemagick.enabled %}
       {% if include.enable_responsive == true or include.enable_responsive == 'true' %}
-      <source
-        class="responsive-img-srcset"
-        srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
-        {% if include.sizes %}
-          sizes="{{include.sizes}}"
-        {% else %}
-          sizes="95vw"
-        {% endif %}
-        type="image/webp"
-      >
+        <source
+          class="responsive-img-srcset"
+          srcset="{% for i in site.imagemagick.widths %}{{ img_path | relative_url }}-{{ i }}.webp {{i}}w,{% endfor %}"
+          {% if include.sizes %}
+            sizes="{{include.sizes}}"
+          {% else %}
+            sizes="95vw"
+          {% endif %}
+          type="image/webp"
+        >
       {% endif %}
     {% endif %}
     <img
