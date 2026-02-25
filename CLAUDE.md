@@ -20,7 +20,7 @@ bundle exec jekyll serve --livereload
 docker-compose up
 ```
 
-The site will be available at http://localhost:8080 (Docker) or http://localhost:4000 (Jekyll direct).
+The site will be available at `localhost:8080` (Docker) or `localhost:4000` (Jekyll direct).
 
 ### Build the Site
 
