@@ -24,7 +24,7 @@ Sou professor de ciência de dados no Insper, doutorando e mestre em Direito e D
 
 Estou interessado em entender como utilizar ferramentas de programação, estatística e inteligência artificial para construir soluções úteis para o Direito. Em meu projeto de doutorado, foco em aplicações voltadas à pesquisa empírica em direito, mas desejo desenvolver propostas voltadas à promoção de direitos em geral.
 
-Também quero construir ferramentas para ajudar outros pesquisadores a desenvolverem essa linha de pesquisa, como as bibliotecas python [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit) e o [Juscraper](https://github.com/jtrecentini/juscraper), projeto liderado pelo Prof. Julio Trecenti.
+Também quero construir ferramentas para ajudar outros pesquisadores a desenvolverem essa linha de pesquisa, como as bibliotecas python [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit) e o [Juscraper](https://github.com/jtrecenti/juscraper), projeto liderado pelo Prof. Julio Trecenti.
 
 </div>
 
@@ -35,6 +35,6 @@ I am a Data Science professor at Insper, a Ph.D. candidate and hold a master's d
 
 I am interested in understanding how to use programming tools, statistics, and artificial intelligence to build useful solutions for the legal field. In my doctoral project, I focus on applications aimed at empirical legal research, but I also wish to develop proposals aimed at promoting rights in general.
 
-I also want to build tools to help other researchers develop this line of research, such as the Python libraries [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit), and [Juscraper](https://github.com/jtrecentini/juscraper), a project led by Prof. Julio Trecenti.
+I also want to build tools to help other researchers develop this line of research, such as the Python libraries [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit), and [Juscraper](https://github.com/jtrecenti/juscraper), a project led by Prof. Julio Trecenti.
 
 </div>
