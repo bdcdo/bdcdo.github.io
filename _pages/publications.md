@@ -18,22 +18,20 @@ nav_order: 2
 </div>
 
 <div class="lang" data-lang="pt">
-  <h2>Preprints</h2>
   <div class="publications">
     {% bibliography --file preprints-pt.bib %}
   </div>
-  <h2>Publicações</h2>
+  <hr>
   <div class="publications">
     {% bibliography --file refs-pt.bib %}
   </div>
 </div>
 
 <div class="lang" data-lang="en">
-  <h2>Preprints</h2>
   <div class="publications">
     {% bibliography --file preprints-en.bib %}
   </div>
-  <h2>Publications</h2>
+  <hr>
   <div class="publications">
     {% bibliography --file refs-en.bib %}
   </div>
