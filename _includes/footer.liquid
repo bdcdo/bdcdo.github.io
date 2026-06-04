@@ -9,7 +9,8 @@
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        <span class="lang" data-lang="pt">Atualizado em: {{ 'now' | date: '%d/%m/%Y' }}.</span>
+        <span class="lang" data-lang="en">Last updated: {{ 'now' | date: '%B %d, %Y' }}.</span>
       {% endif %}
     </div>
   </footer>
@@ -28,7 +29,8 @@
         <a href="{{ site.url }}{{ site.baseurl }}{{ site.impressum_path }}">Impressum</a>.
       {% endif %}
       {% if site.last_updated %}
-        Last updated: {{ 'now' | date: '%B %d, %Y' }}.
+        <span class="lang" data-lang="pt">Atualizado em: {{ 'now' | date: '%d/%m/%Y' }}.</span>
+        <span class="lang" data-lang="en">Last updated: {{ 'now' | date: '%B %d, %Y' }}.</span>
       {% endif %}
     </div>
   </footer>
