@@ -20,7 +20,7 @@ social: true # includes social icons at the bottom of the page
 <div markdown="1" class="lang" data-lang="pt">
 Olá!
 
-Sou professor de ciência de dados aplicada ao direito no Insper, doutorando e mestre em Direito e Desenvolvimento pela FGV Direito SP e bacharel em Direito pela USP. Atuo como pesquisador no Núcleo de Saúde do Centro de Gestão e Políticas Públicas do Insper e no Centro de Pesquisas em Direito e Avaliação de Tecnologias em Saúde (DATS), centro de ciência para o desenvolvimento financiado pela FAPESP e sediado na FGV Direito SP.
+Sou professor de ciência de dados aplicada ao direito no Insper, doutorando e mestre em Direito e Desenvolvimento pela FGV Direito SP e bacharel em Direito pela USP. Atuo como pesquisador no Núcleo de Saúde do Centro de Gestão e Políticas Públicas do Insper no Centro de Pesquisas em Direito e Avaliação de Tecnologias em Saúde (DATS), centro de ciência para o desenvolvimento financiado pela FAPESP e sediado na FGV Direito SP, e no Laboratório de Dados e Pesquisa Empírica em Direito (LabDados), também da FGV Direito SP.
 
 Estou interessado em entender como utilizar ferramentas de programação, estatística e inteligência artificial para construir soluções úteis para o Direito. Em meu projeto de doutorado, foco em aplicações voltadas à pesquisa empírica em direito, mas desejo desenvolver propostas voltadas à promoção de direitos em geral.
 
@@ -29,12 +29,12 @@ Também quero construir ferramentas para ajudar outros pesquisadores a desenvolv
 </div>
 
 <div markdown="1" class="lang" data-lang="en">
-Hello!
+Hi!
 
-I am a professor of Data Science Applied to Law at Insper, a Ph.D. candidate and hold a master's degree in Law and Development from FGV Direito SP, and a bachelor's degree in Law from USP. I work as a researcher at the Health Policy Center at Insper and at the Center for Research in Law and Health Technology Assessment (DATS), a science center for development funded by FAPESP and based at FGV Direito SP.
+I am a professor of Legal Data Science at Insper. I am pursuing a Ph.D. in Law and Development at FGV Direito SP, where I also earned my master's degree, and I hold a bachelor's degree in Law from the University of São Paulo (USP). I am a researcher at the Health Unit of Insper's Center for Public Policy and Management, at the Center for Research in Law and Health Technology Assessment (DATS), a FAPESP-funded research center based at FGV Direito SP, and at the Laboratory of Data and Empirical Legal Research (LabDados), also at FGV Direito SP.
 
-I am interested in understanding how to use programming tools, statistics, and artificial intelligence to build useful solutions for the legal field. In my doctoral project, I focus on applications aimed at empirical legal research, but I also wish to develop proposals aimed at promoting rights in general.
+My work asks how programming, statistics, and artificial intelligence can help solve problems in law. My doctoral project focuses on empirical legal research, and I want to extend these methods to the protection of rights more broadly.
 
-I also want to build tools to help other researchers develop this line of research, such as the Python libraries [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit), and [Juscraper](https://github.com/jtrecenti/juscraper), a project led by Prof. Julio Trecenti.
+I build tools that help other researchers work in this area, such as the Python libraries [Cluster Fácil](https://github.com/bdcdo/cluster-facil), [Dataframeit](https://github.com/bdcdo/dataframeit), and [Juscraper](https://github.com/jtrecenti/juscraper), a project led by Prof. Julio Trecenti.
 
 </div>
