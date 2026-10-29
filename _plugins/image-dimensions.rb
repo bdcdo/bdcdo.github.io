@@ -9,10 +9,13 @@
 # visual continua vindo do CSS (img-fluid, .preview), que força width 100% e
 # height auto; os atributos só dão a proporção.
 #
-# Devolve nil para caminho externo, arquivo inexistente ou formato que não lê
-# (WebP, TIFF, SVG). Nesse caso o include volta ao comportamento antigo,
-# width="100%" e height="auto". O resultado é guardado por caminho porque o
-# bib.liquid chama o filtro duas vezes por publicação (blocos pt e en).
+# Devolve nil para caminho externo, caminho que sai da raiz do site, arquivo
+# inexistente ou formato que não lê (WebP, TIFF, SVG). Nesse caso o include
+# volta ao comportamento antigo, width="100%" e height="auto". Lê as dimensões
+# gravadas no arquivo e ignora a orientação EXIF: uma foto girada por metadado
+# receberia largura e altura trocadas. O resultado é guardado por caminho e
+# mtime, porque o bib.liquid chama o filtro duas vezes por publicação (blocos
+# pt e en) e porque no `jekyll serve` a imagem pode ser trocada sem reiniciar.
 module Jekyll
   module ImageDimensionsFilter
     CACHE = {}
@@ -21,11 +24,12 @@ module Jekyll
       texto = path.to_s
       return nil if texto.empty? || texto.match?(%r{\A[a-z][a-z0-9+.-]*://}i) || texto.start_with?('//')
 
-      site = @context.registers[:site]
-      arquivo = File.join(site.source, texto.sub(%r{\A/}, ''))
-      return nil unless File.file?(arquivo)
+      raiz = File.expand_path(@context.registers[:site].source)
+      arquivo = File.expand_path(texto.sub(%r{\A/}, ''), raiz)
+      return nil unless arquivo.start_with?(raiz + File::SEPARATOR) && File.file?(arquivo)
 
-      CACHE.fetch(arquivo) { CACHE[arquivo] = ler_dimensoes(arquivo) }
+      chave = [arquivo, File.mtime(arquivo)]
+      CACHE.fetch(chave) { CACHE[chave] = ler_dimensoes(arquivo) }
     end
 
     private

@@ -5,8 +5,11 @@
  * CDN para aplicar só as regras abaixo. A lista veio do rastreio de uso de CSS
  * do Chromium (CSS.startRuleUsageTracking) na home, em /publications/, em /blog/
  * e num post, em 390 px e 1366 px de largura, nos temas claro e escuro, com
- * hover nos links e o menu de celular aberto. O mdb.min.js só acrescentava aos
- * links o efeito "waves", que assets/js/common.js remove em seguida.
+ * hover nos links e o menu de celular aberto, mais as regras de tabela que as
+ * páginas de arquivo do blog (ano, categoria e tag) usam e a de strong, que
+ * nenhum post usa hoje mas qualquer negrito futuro usaria. O mdb.min.js só
+ * acrescentava aos links o efeito "waves", que assets/js/common.js remove em
+ * seguida.
  *
  * Mudar aqui muda a aparência de todo o site: a fonte do corpo e o peso 300 dos
  * títulos, as sombras do navbar e das capas (.z-depth-*) e o desenho dos botões.
@@ -37,6 +40,7 @@ a {
   &:hover {
     color: #0056b3;
     text-decoration: none;
+    transition: all 0.2s ease-in-out;
   }
 
   &:not([href]):not([tabindex]),
@@ -44,6 +48,50 @@ a {
   &:not([href]):not([tabindex]):hover {
     color: inherit;
     text-decoration: none;
+  }
+}
+
+// Com o corpo em 300, o "bolder" do Bootstrap daria 400 ao negrito; o MDB fixa 500.
+strong {
+  font-weight: 500;
+}
+
+// Tabelas. As páginas de arquivo do blog (_layouts/archive-*.liquid) usam
+// "table table-sm table-borderless"; sem isto as linhas encolhem de 43 px para 34 px.
+table {
+  th {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  td {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  &.table {
+    th,
+    td {
+      padding-top: 1.1rem;
+      padding-bottom: 1rem;
+    }
+
+    thead th {
+      border-top: none;
+    }
+
+    a {
+      margin: 0;
+      color: #212529;
+    }
+  }
+
+  &.table-sm {
+    th,
+    td {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+    }
   }
 }
 
