@@ -7,6 +7,7 @@ nav: false
 nav_order: 3
 display_categories: [work, fun]
 horizontal: false
+published: false # página de modelo do tema, sem conteúdo próprio ainda
 ---
 
 <!-- pages/projects.md -->

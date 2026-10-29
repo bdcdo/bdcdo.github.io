@@ -2,6 +2,7 @@
 layout: default
 permalink: /blog/
 title: Blog
+description: Textos de Bruno da Cunha de Oliveira sobre pesquisa empírica em direito, programação e inteligência artificial.
 nav: false
 nav_order: 4
 pagination:

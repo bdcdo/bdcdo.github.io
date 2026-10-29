@@ -8,7 +8,8 @@ middle_name: da Cunha
 last_name: de Oliveira
 email: bruno.dcdo@gmail.com
 description: > # the ">" symbol means to ignore newlines until "footer_text:"
-  Pesquisador interessado em usar programação e IA para acelerar a pesquisa em Direito.
+  Professor de ciência de dados aplicada ao direito no Insper e doutorando na FGV Direito SP. Pesquisa empírica em direito e saúde com programação e IA.
+tagline: Ciência de dados aplicada ao direito, Insper e FGV # só no <title> da home; o H1 continua sendo o nome
 keywords: # add your own keywords or leave empty
 lang: pt # the language of your site (for example: en, fr, cn, ru, etc.)
 icon: 🏛️ # the emoji used as the favicon (alternatively, provide image name in /assets/img/)
@@ -57,9 +58,9 @@ max_width: 930px
 # -----------------------------------------------------------------------------
 # Display links to the page with a preview object on social media.
 # see https://schema.org/docs/faq.html for more information
-serve_og_meta: false # Include Open Graph meta tags in the HTML head
+serve_og_meta: true # Include Open Graph meta tags in the HTML head
 serve_schema_org: false # Include Schema.org in the HTML head
-og_image: # The site-wide (default for all links) Open Graph preview image
+og_image: https://brunodcdo.com.br/assets/img/prof_pic.jpg # The site-wide (default for all links) Open Graph preview image
 
 # -----------------------------------------------------------------------------
 # Social integration
@@ -300,7 +301,7 @@ jekyll-archives:
     category: "/blog/category/:name/"
 
 display_tags: #["formatting", "images", "links", "math", "code", "blockquotes"] # these tags will be displayed on the front page of your blog
-display_categories: ["artigos-de-opinião", "blog"] # these categories will be displayed on the front page of your blog
+display_categories: # these categories will be displayed on the front page of your blog
 
 # -----------------------------------------------------------------------------
 # Jekyll Scholar
@@ -422,7 +423,7 @@ enable_pirsch_analytics: false # enables Pirsch analytics (https://pirsch.io/)
 enable_google_verification: false # enables google site verification
 enable_bing_verification: false # enables bing site verification
 enable_masonry: true # enables automatic project cards arrangement
-enable_math: true # enables math typesetting (uses MathJax)
+enable_math: false # enables math typesetting (uses MathJax); nenhuma página usa fórmula, e o MathJax pesava em toda página
 enable_tooltips: false # enables automatic tooltip links generated for each section titles on pages and posts
 enable_darkmode: true # enables switching between light/dark modes
 enable_navbar_social: false # enables displaying social links in the navbar on the about page
