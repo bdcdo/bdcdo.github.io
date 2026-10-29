@@ -42,8 +42,13 @@ module Jekyll
       CacheDigester.new(file_name: file_name, directory: nil).digest!
     end
 
+    # O SCSS deste site vive em _sass/; a pasta assets/_sass/ que o filtro lia não existe aqui. Com
+    # a pasta errada o glob não acha arquivo nenhum e o hash sai sempre o do conteúdo vazio
+    # (d41d8cd98f00b204e9800998ecf8427e), e o cache do main.css nunca invalida por conteúdo.
+    # Só _sass/ entra no hash: o arquivo de entrada assets/css/main.scss e o site.max_width do
+    # _config.yml, que ele interpola, ficam de fora; mudança só neles não troca a query string.
     def bust_css_cache(file_name)
-      CacheDigester.new(file_name: file_name, directory: 'assets/_sass').digest!
+      CacheDigester.new(file_name: file_name, directory: '_sass').digest!
     end
   end
 end
