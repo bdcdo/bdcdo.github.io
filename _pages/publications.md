@@ -3,7 +3,7 @@ layout: page
 permalink: /publications/
 title: Publicações
 title_en: Publications
-description:
+description: Artigos, preprints e relatórios de Bruno da Cunha de Oliveira sobre judicialização da saúde, NatJus, STF e pesquisa empírica em direito, com PDFs e resumos.
 nav: true
 nav_order: 2
 ---

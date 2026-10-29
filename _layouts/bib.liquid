@@ -30,14 +30,22 @@
           <img class="preview z-depth-1 rounded" src="{{ entry.preview }}">
         {% else %}
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
+          {% comment %}
+            enable_responsive emite o <source> WebP que o jekyll-imagemagick já gera; sem ele a página
+            servia só o JPG original. index vem do jekyll-scholar, começa em 1 e reinicia a cada grupo
+            de ano: a primeira capa de cada grupo carrega eager (a do primeiro grupo é o LCP); as demais
+            ficam lazy, como site.lazy_loading_images manda.
+          {% endcomment %}
+          {% if index == 1 %}{% assign preview_loading = 'eager' %}{% else %}{% assign preview_loading = 'lazy' %}{% endif %}
           {%
             include figure.liquid
-            loading="eager"
+            loading=preview_loading
+            enable_responsive=true
             path=entry_path
             sizes = "200px"
             class="preview z-depth-1 rounded"
             zoomable=true
-            alt=entry.preview
+            alt=entry.title
           %}
         {% endif %}
       {% endif %}
@@ -199,6 +207,9 @@
       {% endif %}
       {% if entry.bibtex_show %}
         <a class="bibtex btn btn-sm z-depth-0" role="button">Bib</a>
+      {% endif %}
+      {% if entry.doi %}
+        <a href="https://doi.org/{{ entry.doi }}" class="btn btn-sm z-depth-0" role="button">DOI</a>
       {% endif %}
       {% if entry.html %}
         {% if entry.html contains '://' %}
