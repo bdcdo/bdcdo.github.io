@@ -17,17 +17,8 @@
 
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
-<!--
-  O CSS do Google Fonts vem de um host e os arquivos de fonte de outro; abrir as duas conexões cedo tira esse tempo do caminho da primeira pintura
--->
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link
-  defer
-  rel="stylesheet"
-  type="text/css"
-  href="{{ site.third_party_libraries.google_fonts.url.fonts }}"
->
+<!-- Roboto servida daqui (assets/fonts/roboto, gerada por bin/baixa-roboto.py): o CSS do Google Fonts era uma folha bloqueante de outra origem -->
+<link rel="stylesheet" href="{{ '/assets/css/roboto.css' | relative_url | bust_file_cache }}">
 
 <!-- Code Syntax Highlighting -->
 <link

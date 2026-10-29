@@ -9,3 +9,5 @@ assets/plotly/demo.html
 lighthouse_results/**
 _posts/2015-10-20-math.md
 _sass/font-awesome/*.scss
+# gerado por bin/baixa-roboto.py a partir do CSS do Google Fonts
+assets/css/roboto.css

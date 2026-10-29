@@ -480,9 +480,6 @@ third_party_libraries:
         library: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/dist/echarts.min.js"
         dark_theme: "https://cdn.jsdelivr.net/npm/echarts@{{version}}/theme/dark-fresh-cut.js"
     version: "5.5.0"
-  google_fonts:
-    url:
-      fonts: "https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap" # só a Roboto: nenhum estilo do tema usa Roboto Slab nem Material Icons
   highlightjs:
     integrity:
       css:
@@ -497,7 +494,7 @@ third_party_libraries:
     integrity:
       js: "sha256-htrLFfZJ6v5udOG+3kNLINIKh2gvoKqwEhHYfTTMICc="
     url:
-      js: https://cdn.jsdelivr.net/npm/imagesloaded@{{version}}/imagesloaded.pkgd.min.js
+      js: "/assets/js/libs/imagesloaded-5.0.0.pkgd.min.js" # cópia local do jsDelivr
     version: "5.0.0"
   img-comparison-slider:
     integrity:
@@ -513,7 +510,7 @@ third_party_libraries:
     integrity:
       js: "sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
     url:
-      js: "https://cdn.jsdelivr.net/npm/jquery@{{version}}/dist/jquery.min.js"
+      js: "/assets/js/libs/jquery-3.6.0.min.js" # cópia local do jsDelivr, mesmo hash de integridade
     version: "3.6.0"
   leaflet:
     integrity:
@@ -541,13 +538,13 @@ third_party_libraries:
     integrity:
       js: "sha256-Nn1q/fx0H7SNLZMQ5Hw5JLaTRZp0yILA/FRexe19VdI="
     url:
-      js: "https://cdn.jsdelivr.net/npm/masonry-layout@{{version}}/dist/masonry.pkgd.min.js"
+      js: "/assets/js/libs/masonry-layout-4.2.2.pkgd.min.js" # cópia local do jsDelivr
     version: "4.2.2"
   medium_zoom:
     integrity:
       js: "sha256-ZgMyDAIYDYGxbcpJcfUnYwNevG/xi9OHKaR/8GK+jWc="
     url:
-      js: "https://cdn.jsdelivr.net/npm/medium-zoom@{{version}}/dist/medium-zoom.min.js"
+      js: "/assets/js/libs/medium-zoom-1.1.0.min.js" # cópia local do jsDelivr
     version: "1.1.0"
   mermaid:
     integrity:
