@@ -32,10 +32,11 @@
           {% assign entry_path = entry.preview | prepend: '/assets/img/publication_preview/' %}
           {% comment %}
             enable_responsive emite o <source> WebP que o jekyll-imagemagick já gera; sem ele a página
-            servia só o JPG original. index vem do jekyll-scholar: as três primeiras capas carregam
-            eager porque uma delas é o LCP; as demais ficam lazy, como site.lazy_loading_images manda.
+            servia só o JPG original. index vem do jekyll-scholar, começa em 1 e reinicia a cada grupo
+            de ano: a primeira capa de cada grupo carrega eager (a do primeiro grupo é o LCP); as demais
+            ficam lazy, como site.lazy_loading_images manda.
           {% endcomment %}
-          {% if index < 3 %}{% assign preview_loading = 'eager' %}{% else %}{% assign preview_loading = 'lazy' %}{% endif %}
+          {% if index == 1 %}{% assign preview_loading = 'eager' %}{% else %}{% assign preview_loading = 'lazy' %}{% endif %}
           {%
             include figure.liquid
             loading=preview_loading
