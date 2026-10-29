@@ -1,0 +1,202 @@
+/*******************************************************************************
+ * Subconjunto do MDBootstrap 4.20.0 (licença MIT) que o tema usa de fato.
+ *
+ * O site carregava o mdb.min.css inteiro (277 KB) e o mdb.min.js (288 KB) de um
+ * CDN para aplicar só as regras abaixo. A lista veio do rastreio de uso de CSS
+ * do Chromium (CSS.startRuleUsageTracking) na home, em /publications/, em /blog/
+ * e num post, em 390 px e 1366 px de largura, nos temas claro e escuro, com
+ * hover nos links e o menu de celular aberto, mais as regras de tabela que as
+ * páginas de arquivo do blog (ano, categoria e tag) usam e a de strong, que
+ * nenhum post usa hoje mas qualquer negrito futuro usaria. O mdb.min.js só
+ * acrescentava aos links o efeito "waves", que assets/js/common.js remove em
+ * seguida.
+ *
+ * Mudar aqui muda a aparência de todo o site: a fonte do corpo e o peso 300 dos
+ * títulos, as sombras do navbar e das capas (.z-depth-*) e o desenho dos botões.
+ * Importado antes de "base" em assets/css/main.scss para manter a ordem da
+ * cascata que existia quando o mdb.min.css vinha antes do main.css.
+ ******************************************************************************/
+
+body {
+  font-family: "Roboto", sans-serif;
+  font-weight: 300;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: 300;
+}
+
+a {
+  color: #007bff;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s ease-in-out;
+
+  &:hover {
+    color: #0056b3;
+    text-decoration: none;
+    transition: all 0.2s ease-in-out;
+  }
+
+  &:not([href]):not([tabindex]),
+  &:not([href]):not([tabindex]):focus,
+  &:not([href]):not([tabindex]):hover {
+    color: inherit;
+    text-decoration: none;
+  }
+}
+
+// Com o corpo em 300, o "bolder" do Bootstrap daria 400 ao negrito; o MDB fixa 500.
+strong {
+  font-weight: 500;
+}
+
+// Tabelas. As páginas de arquivo do blog (_layouts/archive-*.liquid) usam
+// "table table-sm table-borderless"; sem isto as linhas encolhem de 43 px para 34 px.
+table {
+  th {
+    font-size: 0.9rem;
+    font-weight: 400;
+  }
+
+  td {
+    font-size: 0.9rem;
+    font-weight: 300;
+  }
+
+  &.table {
+    th,
+    td {
+      padding-top: 1.1rem;
+      padding-bottom: 1rem;
+    }
+
+    thead th {
+      border-top: none;
+    }
+
+    a {
+      margin: 0;
+      color: #212529;
+    }
+  }
+
+  &.table-sm {
+    th,
+    td {
+      padding-top: 0.6rem;
+      padding-bottom: 0.6rem;
+    }
+  }
+}
+
+// Sombras de elevação. O !important é do original e garante que a sombra vença
+// a de componentes como .card e .btn.
+.z-depth-0 {
+  box-shadow: none !important;
+}
+
+.z-depth-1 {
+  box-shadow:
+    0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12) !important;
+}
+
+.navbar {
+  font-weight: 300;
+  box-shadow:
+    0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+
+  .navbar-toggler {
+    border-width: 0;
+    outline: 0;
+  }
+
+  .nav-item .nav-link {
+    display: block;
+  }
+
+  &.navbar-light {
+    .navbar-toggler {
+      color: #000;
+    }
+
+    .navbar-nav .nav-item {
+      .nav-link {
+        color: #000;
+        transition: 0.35s;
+
+        &:hover {
+          color: rgba(0, 0, 0, 0.7);
+        }
+      }
+
+      &.active > .nav-link {
+        background-color: rgba(0, 0, 0, 0.1);
+
+        &:hover {
+          color: #000;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 992px) {
+    .container {
+      width: 100%;
+    }
+
+    .nav-item .nav-link {
+      padding-right: 6px;
+      padding-left: 6px;
+    }
+  }
+}
+
+// Botões em caixa alta com sombra, usados nos links de PDF, DOI e resumo em /publications/.
+.btn {
+  margin: 0.375rem;
+  color: inherit;
+  text-transform: uppercase;
+  word-wrap: break-word;
+  white-space: normal;
+  cursor: pointer;
+  border: 0;
+  border-radius: 0.125rem;
+  box-shadow:
+    0 2px 5px 0 rgba(0, 0, 0, 0.16),
+    0 2px 10px 0 rgba(0, 0, 0, 0.12);
+  transition:
+    color 0.15s ease-in-out,
+    background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out,
+    box-shadow 0.15s ease-in-out;
+  padding: 0.84rem 2.14rem;
+  font-size: 0.81rem;
+
+  &.btn-sm {
+    padding: 0.5rem 1.6rem;
+    font-size: 0.64rem;
+  }
+
+  &:hover,
+  &:focus,
+  &:active {
+    outline: 0;
+    box-shadow:
+      0 5px 11px 0 rgba(0, 0, 0, 0.18),
+      0 4px 15px 0 rgba(0, 0, 0, 0.15);
+  }
+}
+
+a.btn:not([href]):not([tabindex]),
+a.btn:not([href]):not([tabindex]):focus,
+a.btn:not([href]):not([tabindex]):hover {
+  color: #000;
+}

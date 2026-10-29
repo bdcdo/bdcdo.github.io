@@ -30,13 +30,24 @@
       {% if include.class %}
         class="{{ include.class }}"
       {% endif %}
+      {% comment %}
+        Largura e altura reais, em pixels, lidas do arquivo pelo filtro image_dimensions
+        (_plugins/image-dimensions.rb). Com elas o navegador reserva o espaço antes de baixar
+        a imagem. O tamanho visual continua vindo do CSS (img-fluid, .preview). Sem o arquivo
+        local, vale o comportamento antigo.
+      {% endcomment %}
+      {% assign dims = include.path | image_dimensions %}
       {% if include.width %}
         width="{{ include.width }}"
+      {% elsif dims %}
+        width="{{ dims.width }}"
       {% else %}
         width="100%"
       {% endif %}
       {% if include.height %}
         height="{{ include.height }}"
+      {% elsif dims %}
+        height="{{ dims.height }}"
       {% else %}
         height="auto"
       {% endif %}
