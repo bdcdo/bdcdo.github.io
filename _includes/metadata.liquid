@@ -35,7 +35,7 @@
       {{ page.title }} | {{ title }}
     {% endif %}
   {% else %}
-    {{ title }}
+    {{ title }}{% if site.tagline %} | {{ site.tagline }}{% endif %}
   {% endif %}
 </title>
 <meta name="author" content="{{ author_name }}">
@@ -74,6 +74,10 @@
     <meta name="twitter:site" content="@{{ site.x_username }}">
     <meta name="twitter:creator" content="@{{ site.x_username }}">
   {% endif %}
+{% endif %}
+
+{% if page.url == '/' %}
+  {% include schema_person.liquid %}
 {% endif %}
 
 {% if site.serve_schema_org %}
