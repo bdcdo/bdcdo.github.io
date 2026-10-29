@@ -1,0 +1,19 @@
+name: Fontes de ícone em dia
+
+# As fontes de ícone servidas em assets/ são subconjuntos gerados por bin/subconjunto-icones.py
+# a partir das fontes completas em _fonts-completas/. Este job falha quando alguém cita um
+# ícone novo num template sem regenerar os subconjuntos, para que o glifo não saia em branco.
+on:
+  push:
+    branches:
+      - master
+  pull_request:
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: astral-sh/setup-uv@v5
+      - name: Confere os subconjuntos
+        run: uv run bin/subconjunto-icones.py --check

@@ -29,7 +29,7 @@ layout: default
       30vw, 95vw"{% endcapture %}
           {% capture profile_alt %}{{ site.first_name }} {{ site.middle_name }} {{ site.last_name }}{% endcapture %}
           {%
-            include figure.liquid loading="eager" enable_responsive=true path=profile_image_path class=profile_image_class sizes=sizes alt=profile_alt
+            include figure.liquid loading="eager" fetchpriority="high" enable_responsive=true path=profile_image_path class=profile_image_class sizes=sizes alt=profile_alt
             cache_bust=true
           %}
         {% endif %}
