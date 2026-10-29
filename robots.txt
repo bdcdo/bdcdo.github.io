@@ -1,4 +1,4 @@
 User-agent: *
 Disallow:
 
-Sitemap: https://bdcdo.github.io/sitemap.xml
+Sitemap: https://brunodcdo.com.br/sitemap.xml
