@@ -6,45 +6,45 @@
 {% capture author_name %}{{ site.first_name }}{% if site.middle_name %} {{ site.middle_name }}{% endif %} {{ site.last_name }}{% endcapture %}
 {% assign home_url = site.url | append: site.baseurl | append: '/' %}
 <script type="application/ld+json">
-{
-  "@context": "https://schema.org",
-  "@graph": [
-    {
-      "@type": "WebSite",
-      "@id": "{{ home_url }}#website",
-      "url": "{{ home_url }}",
-      "name": "{{ author_name }}",
-      "description": {{ site.description | strip | jsonify }},
-      "inLanguage": ["pt", "en"],
-      "publisher": { "@id": "{{ home_url }}#person" }
-    },
-    {
-      "@type": "Person",
-      "@id": "{{ home_url }}#person",
-      "name": "{{ author_name }}",
-      "url": "{{ home_url }}",
-      "image": "{{ home_url }}assets/img/prof_pic.jpg",
-      "jobTitle": "Professor de ciência de dados aplicada ao direito",
-      "description": {{ site.description | strip | jsonify }},
-      "worksFor": { "@type": "CollegeOrUniversity", "name": "Insper" },
-      "affiliation": [
-        { "@type": "Organization", "name": "Centro de Pesquisas em Direito e Avaliação de Tecnologias em Saúde (DATS)" },
-        { "@type": "Organization", "name": "Laboratório de Dados e Pesquisa Empírica em Direito (LabDados), FGV Direito SP" }
-      ],
-      "alumniOf": [
-        { "@type": "CollegeOrUniversity", "name": "FGV Direito SP" },
-        { "@type": "CollegeOrUniversity", "name": "Universidade de São Paulo" }
-      ],
-      "knowsAbout": ["pesquisa empírica em direito", "judicialização da saúde", "ciência de dados aplicada ao direito", "inteligência artificial"],
-      "sameAs": [
-        {% if site.orcid_id %}"https://orcid.org/{{ site.orcid_id }}",{% endif %}
-        {% if site.scholar_userid %}"https://scholar.google.com/citations?user={{ site.scholar_userid }}",{% endif %}
-        {% if site.lattes_id %}"http://lattes.cnpq.br/{{ site.lattes_id }}",{% endif %}
-        {% if site.github_username %}"https://github.com/{{ site.github_username }}",{% endif %}
-        {% if site.linkedin_username %}"https://www.linkedin.com/in/{{ site.linkedin_username }}",{% endif %}
-        "https://brunodcdo.substack.com/"
-      ]
-    }
-  ]
-}
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "{{ home_url }}#website",
+        "url": "{{ home_url }}",
+        "name": "{{ author_name }}",
+        "description": {{ site.description | strip | jsonify }},
+        "inLanguage": ["pt", "en"],
+        "publisher": { "@id": "{{ home_url }}#person" }
+      },
+      {
+        "@type": "Person",
+        "@id": "{{ home_url }}#person",
+        "name": "{{ author_name }}",
+        "url": "{{ home_url }}",
+        "image": "{{ home_url }}assets/img/prof_pic.jpg",
+        "jobTitle": "Professor de ciência de dados aplicada ao direito",
+        "description": {{ site.description | strip | jsonify }},
+        "worksFor": { "@type": "CollegeOrUniversity", "name": "Insper" },
+        "affiliation": [
+          { "@type": "Organization", "name": "Centro de Pesquisas em Direito e Avaliação de Tecnologias em Saúde (DATS)" },
+          { "@type": "Organization", "name": "Laboratório de Dados e Pesquisa Empírica em Direito (LabDados), FGV Direito SP" }
+        ],
+        "alumniOf": [
+          { "@type": "CollegeOrUniversity", "name": "FGV Direito SP" },
+          { "@type": "CollegeOrUniversity", "name": "Universidade de São Paulo" }
+        ],
+        "knowsAbout": ["pesquisa empírica em direito", "judicialização da saúde", "ciência de dados aplicada ao direito", "inteligência artificial"],
+        "sameAs": [
+          {% if site.orcid_id %}"https://orcid.org/{{ site.orcid_id }}",{% endif %}
+          {% if site.scholar_userid %}"https://scholar.google.com/citations?user={{ site.scholar_userid }}",{% endif %}
+          {% if site.lattes_id %}"http://lattes.cnpq.br/{{ site.lattes_id }}",{% endif %}
+          {% if site.github_username %}"https://github.com/{{ site.github_username }}",{% endif %}
+          {% if site.linkedin_username %}"https://www.linkedin.com/in/{{ site.linkedin_username }}",{% endif %}
+          "https://brunodcdo.substack.com/"
+        ]
+      }
+    ]
+  }
 </script>
