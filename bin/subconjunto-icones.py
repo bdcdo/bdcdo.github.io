@@ -11,7 +11,8 @@ tabler-icons-outline.woff2 para desenhar um único glifo, o do botão de tema.
 Regra: entra todo ícone cuja classe (fa-*, ai-*, ti-*) aparece em algum template, página, dado
 ou script do tema, inclusive os de redes sociais que o _config.yml não liga hoje. Assim ligar
 uma rede nova no _config.yml não exige regenerar as fontes; só um ícone que o tema nunca citou
-exige rodar este script de novo.
+exige rodar este script de novo. Fora da regra ficam ícones que bibliotecas de terceiros montam em
+tempo de execução, como os do bootstrap-table (fa-sync, fa-search...), que nenhuma página usa hoje.
 
 Uso:
     uv run bin/subconjunto-icones.py            # regenera os arquivos em assets/
@@ -52,8 +53,9 @@ ONDE_PROCURAR = [
     "_bibliography",
     "_config.yml",
     "assets/js",
+    "assets/json",  # resume.json entra como site.data.resume e traz classes de ícone
 ]
-EXTENSOES = {".liquid", ".html", ".md", ".yml", ".yaml", ".bib", ".js"}
+EXTENSOES = {".liquid", ".html", ".md", ".yml", ".yaml", ".bib", ".js", ".json"}
 PADRAO_CLASSE = re.compile(r"\b(fa|ai|ti)-([a-z0-9][a-z0-9-]*)\b")
 
 # (origem em _fonts-completas, destino em assets sem extensão, prefixo das classes)

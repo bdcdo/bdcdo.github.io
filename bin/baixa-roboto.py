@@ -38,6 +38,10 @@ def main() -> None:
         "/* Roboto (Apache 2.0), servida daqui. Gerado por bin/baixa-roboto.py a partir do CSS do Google Fonts;",
         "   não editar à mão. */",
     ]
+    # O Google serve a Roboto como fonte variável: os quatro pesos apontam para o mesmo woff2 por
+    # subconjunto. Um arquivo por URL, e não por peso, para o navegador baixar uma vez só; o CSS
+    # mantém um @font-face por peso, como o do Google, apontando para o mesmo arquivo.
+    arquivos_por_url: dict[str, str] = {}
     for subconjunto, bloco in blocos:
         if subconjunto not in SUBCONJUNTOS:
             continue
@@ -45,13 +49,23 @@ def main() -> None:
         url = re.search(
             r"url\((https://fonts\.gstatic\.com/[^)]+\.woff2)\)", bloco
         ).group(1)
-        nome = f"roboto-{peso}-{subconjunto}.woff2"
-        (DESTINO_FONTES / nome).write_bytes(baixar(url))
-        bloco_local = bloco.replace(url, f"../fonts/roboto/{nome}")
-        saida.append(f"/* {subconjunto} */\n{bloco_local}")
-        print(f"{nome}: {(DESTINO_FONTES / nome).stat().st_size // 1024} KB")
+        if url not in arquivos_por_url:
+            dados = baixar(url)
+            base = f"roboto-{subconjunto}.woff2"
+            nome = (
+                base
+                if base not in arquivos_por_url.values()
+                else f"roboto-{subconjunto}-{peso}.woff2"
+            )
+            (DESTINO_FONTES / nome).write_bytes(dados)
+            arquivos_por_url[url] = nome
+            print(f"{nome}: {len(dados) // 1024} KB")
+        bloco_local = bloco.replace(url, f"../fonts/roboto/{arquivos_por_url[url]}")
+        saida.append(f"/* {subconjunto} {peso} */\n{bloco_local}")
     DESTINO_CSS.write_text("\n".join(saida) + "\n", encoding="utf-8")
-    print(f"{DESTINO_CSS.relative_to(RAIZ)} com {len(saida) - 2} @font-face")
+    print(
+        f"{DESTINO_CSS.relative_to(RAIZ)} com {len(saida) - 2} @font-face e {len(arquivos_por_url)} arquivos"
+    )
 
 
 if __name__ == "__main__":
