@@ -1,14 +1,8 @@
 <!-- Metadata, OpenGraph and Schema.org -->
 {% include metadata.liquid %}
 
-<!-- Bootstrap & MDB -->
+<!-- Bootstrap. O que o tema usava do MDBootstrap está em _sass/_mdb-subset.scss -->
 <link rel="stylesheet" href="{{ '/assets/css/bootstrap.min.css' | relative_url | bust_file_cache }}">
-<link
-  rel="stylesheet"
-  href="{{ site.third_party_libraries.mdb.url.css }}"
-  integrity="{{ site.third_party_libraries.mdb.integrity.css }}"
-  crossorigin="anonymous"
->
 
 <!-- Bootstrap Table -->
 {% if page.pretty_table %}
@@ -23,6 +17,11 @@
 
 <!-- Fonts & Icons -->
 <link defer rel="stylesheet" href="{{ '/assets/css/academicons.min.css' | relative_url | bust_file_cache }}">
+<!--
+  O CSS do Google Fonts vem de um host e os arquivos de fonte de outro; abrir as duas conexões cedo tira esse tempo do caminho da primeira pintura
+-->
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link
   defer
   rel="stylesheet"
