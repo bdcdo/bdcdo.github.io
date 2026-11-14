@@ -9,6 +9,10 @@ updates:
       interval: monthly
     cooldown:
       default-days: 7
+    # Assunto em português no título dos PRs e commits; o resto o Dependabot
+    # escreve em inglês: "Actions do CI: Bump the github-actions group ...".
+    commit-message:
+      prefix: "Actions do CI"
     groups:
       github-actions:
         patterns: ["*"]
