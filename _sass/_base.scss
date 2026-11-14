@@ -54,6 +54,14 @@ table.table a {
   }
 }
 
+// Links no meio do texto ficam sublinhados: no tema escuro nenhuma cor separa o link do texto com 3:1
+// sem perder 4,5:1 sobre o fundo, então a cor sozinha não basta (WCAG 1.4.1).
+.post article p a:not(.btn),
+.publications .periodical a {
+  text-decoration: underline;
+  text-underline-offset: 0.15em;
+}
+
 .table-dark {
   background-color: transparent;
   &.table-bordered {
