@@ -45,6 +45,7 @@ jobs:
           # only check local links
           args: >-
             --offline
+            --root-dir '${{ github.workspace }}/_site'
             --remap '_site(/?.*)/assets/(.*) _site/assets/$2'
             --exclude 'file://.*/_site/assets/img/.*-[0-9]+\.webp$'
             --verbose
