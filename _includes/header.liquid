@@ -102,21 +102,26 @@
               {% else %}
                 {% assign parent_link = p.permalink | remove: 'index.html' %}
                 <li class="nav-item {% if page.url contains parent_link %}active{% endif %}">
-                  {% if p.redirect %}
-                    <a class="nav-link" href="{{ p.redirect }}" target="_blank" rel="noopener">
-                      <span class="lang" data-lang="pt">{{- p.title }}</span>
-                      <span class="lang" data-lang="en">{{- p.title_en }}</span>
-                    </a>
+                  {% if p.redirect contains '://' %}
+                    {% assign url = p.redirect %}
+                  {% elsif p.permalink contains '/blog/' %}
+                    {% assign url = '/blog/' | relative_url %}
                   {% else %}
-                    {% if p.permalink contains '/blog/' %}{% assign url = '/blog/' %} {% else %}{% assign url = p.url %}{% endif %}
-                    <a class="nav-link" href="{{ url | relative_url }}">
-                      <span class="lang" data-lang="pt">{{- p.title }}</span>
-                      <span class="lang" data-lang="en">{{- p.title_en }}</span>
-                      {% if page.url contains p.url %}
-                        <span class="sr-only">(current)</span>
-                      {% endif %}
-                    </a>
+                    {% assign url = p.url | relative_url %}
                   {% endif %}
+                  <a
+                    class="nav-link"
+                    href="{{ url }}"
+                    {% if p.redirect contains '://' %}
+                      target="_blank" rel="noopener"
+                    {% endif %}
+                  >
+                    <span class="lang" data-lang="pt">{{- p.title }}</span>
+                    <span class="lang" data-lang="en">{{- p.title_en }}</span>
+                    {% if page.url contains p.url %}
+                      <span class="sr-only">(current)</span>
+                    {% endif %}
+                  </a>
                 </li>
               {% endif %}
             {% endif %}
