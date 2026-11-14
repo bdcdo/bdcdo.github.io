@@ -14,7 +14,7 @@ uvx pre-commit install    # hooks from .pre-commit-config.yaml (needs uv; `pip i
 bundle install            # Ruby 3.2.2 (the version CI uses) for the Jekyll build
 ```
 
-`uv` is also needed to run the Python scripts in `bin/` (each one declares its own dependencies inline).
+`uv` is also needed for `bin/subconjunto-icones.py`, which declares its dependency (fonttools) inline; `bin/baixa-roboto.py` only needs the Python standard library.
 
 ## Checks
 
