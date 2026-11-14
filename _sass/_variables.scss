@@ -16,7 +16,8 @@ $green-color-lime: #b7d12a !default;
 $green-color-dark: #009f06 !default;
 $green-color-light: #ddffdd !default;
 $green-color-bright: #11d68b !default;
-$purple-color: #374151 !default;
+// Cor de destaque do tema claro: 5:1 sobre o fundo e 3,2:1 sobre o texto, para o link se distinguir só pela cor (WCAG).
+$purple-color: #0f766e !default;
 $light-purple-color: lighten($purple-color, 25%);
 $pink-color: #f92080 !default;
 $pink-color-light: #ffdddd !default;

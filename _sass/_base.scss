@@ -683,7 +683,8 @@ footer.sticky-bottom {
   }
 
   h2.bibliography {
-    color: var(--global-divider-color);
+    // Texto secundário, não a cor da divisória: o ano precisa de pelo menos 3:1 sobre o fundo (texto grande, WCAG).
+    color: var(--global-text-color-light);
     border-top: 1px solid var(--global-divider-color);
     padding-top: 1rem;
     margin-top: 2rem;
