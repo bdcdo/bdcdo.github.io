@@ -229,7 +229,6 @@ exclude:
   - assets/html/relativity.html
   - assets/json/resume.json
   - assets/json/table_data.json
-  - assets/jupyter/blog.ipynb
   - assets/plotly/demo.html
   - bin/
   - CLAUDE.md
@@ -249,7 +248,6 @@ exclude:
   - purgecss.config.js
   - README.md
   - readme_preview/
-  - requirements.txt
   - vendor
 keep_files:
   - CNAME
@@ -262,7 +260,6 @@ plugins:
   - jekyll-feed
   - jekyll-get-json
   - jekyll-imagemagick
-  - jekyll-jupyter-notebook
   - jekyll-link-attributes
   - jekyll-minifier
   - jekyll-paginate-v2
