@@ -225,6 +225,12 @@ kramdown:
 # Includes & excludes
 include: ["_pages"]
 exclude:
+  # demos do tema al-folio, sem conteúdo do site; resume.json continua lido por jekyll_get_json
+  - assets/html/relativity.html
+  - assets/json/resume.json
+  - assets/json/table_data.json
+  - assets/jupyter/blog.ipynb
+  - assets/plotly/demo.html
   - bin/
   - CLAUDE.md
   - CONTRIBUTING.md
