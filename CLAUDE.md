@@ -11,7 +11,7 @@ This repository contains a personal academic website built with Jekyll using the
 ```bash
 npm ci                    # Prettier 3.1.1 + @shopify/prettier-plugin-liquid, pinned in package.json
 uvx pre-commit install    # hooks from .pre-commit-config.yaml (needs uv; `pip install pre-commit` also works)
-bundle install            # Ruby 3.2 (the series CI uses) for the Jekyll build
+bundle install            # Ruby 3.2 (CI uses the latest 3.2.x) for the Jekyll build
 ```
 
 `uv` is also needed for `bin/subconjunto-icones.py`, which declares its dependency (fonttools) inline; `bin/baixa-roboto.py` only needs the Python standard library.
